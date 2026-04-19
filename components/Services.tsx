@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState, useEffect, useRef } from "react";
@@ -65,7 +66,7 @@ export default function Services() {
           }
         });
       },
-      { threshold: 0.08 }
+      { threshold: 0.08 },
     );
 
     items.forEach((item) => observer.observe(item));
@@ -116,9 +117,7 @@ export default function Services() {
               data-delay={String(i * 55)}
             >
               <button
-                onClick={() =>
-                  setActiveIndex(activeIndex === i ? null : i)
-                }
+                onClick={() => setActiveIndex(activeIndex === i ? null : i)}
                 className="w-full flex items-center gap-6 py-7 text-left group"
               >
                 <span className="text-[#8baf7c] text-sm font-medium w-8 shrink-0 tabular-nums">

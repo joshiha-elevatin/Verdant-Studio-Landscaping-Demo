@@ -52,7 +52,7 @@ export default function Process() {
           }
         });
       },
-      { threshold: 0.08 }
+      { threshold: 0.08 },
     );
 
     items.forEach((item) => observer.observe(item));
@@ -89,8 +89,9 @@ export default function Process() {
             className="reveal-up text-white/48 max-w-xs leading-relaxed text-sm"
             data-delay="150"
           >
-            From initial consultation to ongoing stewardship, we accompany you
-            at every stage of your landscape's life.
+            {
+              "From initial consultation to ongoing stewardship, we accompany you at every stage of your landscape's life."
+            }
           </p>
         </div>
 
@@ -103,9 +104,9 @@ export default function Process() {
               data-delay={String(i * 90)}
             >
               {/* Outer shell */}
-              <div className="p-2 rounded-[2rem] bg-white/5 ring-1 ring-white/8 h-full">
+              <div className="p-2 rounded-4xl bg-white/5 ring-1 ring-white/8 h-full">
                 {/* Inner core */}
-                <div className="h-full rounded-[calc(2rem-8px)] p-7 bg-white/3 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] flex flex-col gap-6">
+                <div className="h-full rounded-3xl p-7 bg-white/3 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] flex flex-col gap-6">
                   <div className="flex items-start justify-between">
                     <span className="font-serif text-5xl font-bold text-white/14 leading-none">
                       {step.number}

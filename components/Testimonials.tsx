@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState, useEffect, useRef } from "react";
@@ -36,7 +37,7 @@ export default function Testimonials() {
     if (!section) return;
 
     const items = section.querySelectorAll<HTMLElement>(
-      ".reveal-up, .reveal-scale"
+      ".reveal-up, .reveal-scale",
     );
     const observer = new IntersectionObserver(
       (entries) => {
@@ -49,7 +50,7 @@ export default function Testimonials() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     items.forEach((item) => observer.observe(item));
@@ -94,10 +95,12 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left — quote card (double-bezel) */}
           <div className="reveal-up" data-delay="120">
-            <div className="p-2 rounded-[2rem] bg-[#1c2b1a]/5 ring-1 ring-[#1c2b1a]/9">
+            <div className="p-2 rounded-4xl bg-[#1c2b1a]/5 ring-1 ring-[#1c2b1a]/9">
               <div
-                className={`rounded-[calc(2rem-8px)] bg-white shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)] p-10 min-h-72 flex flex-col justify-between transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-                  animating ? "opacity-0 translate-y-3" : "opacity-100 translate-y-0"
+                className={`rounded-3xl bg-white shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)] p-10 min-h-72 flex flex-col justify-between transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+                  animating
+                    ? "opacity-0 translate-y-3"
+                    : "opacity-100 translate-y-0"
                 }`}
               >
                 <div>
@@ -137,7 +140,15 @@ export default function Testimonials() {
                 {testimonials.map((t, i) => (
                   <button
                     key={i}
-                    onClick={() => { if (!animating) { setAnimating(true); setTimeout(() => { setCurrent(i); setAnimating(false); }, 200); } }}
+                    onClick={() => {
+                      if (!animating) {
+                        setAnimating(true);
+                        setTimeout(() => {
+                          setCurrent(i);
+                          setAnimating(false);
+                        }, 200);
+                      }
+                    }}
                     aria-label={`View testimonial from ${t.author}`}
                     className={`w-14 h-14 rounded-full overflow-hidden ring-2 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
                       current === i

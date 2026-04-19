@@ -92,18 +92,18 @@ export default function Nav() {
           }`}
         >
           <span
-            className={`absolute block h-px w-[18px] bg-current transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-              open ? "rotate-45 translate-y-0" : "-translate-y-[5px]"
+            className={`absolute block h-px w-4.5 bg-current transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+              open ? "rotate-45 translate-y-0" : "-translate-y-1.25"
             }`}
           />
           <span
             className={`absolute block h-px bg-current transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-              open ? "w-0 opacity-0" : "w-[18px] opacity-100"
+              open ? "w-0 opacity-0" : "w-4.5 opacity-100"
             }`}
           />
           <span
-            className={`absolute block h-px w-[18px] bg-current transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-              open ? "-rotate-45 translate-y-0" : "translate-y-[5px]"
+            className={`absolute block h-px w-4.5 bg-current transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+              open ? "-rotate-45 translate-y-0" : "translate-y-1.25"
             }`}
           />
         </button>
@@ -124,9 +124,7 @@ export default function Nav() {
               href={`#${link.toLowerCase()}`}
               onClick={() => setOpen(false)}
               className={`font-serif text-5xl sm:text-6xl font-medium text-white/90 hover:text-[#c8a84b] transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-                open
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-10"
+                open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
               style={{
                 transitionDelay: open ? `${80 + i * 70}ms` : "0ms",

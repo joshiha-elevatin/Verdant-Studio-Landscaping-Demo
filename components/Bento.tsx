@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -8,7 +9,7 @@ function useReveal(sectionRef: React.RefObject<HTMLElement | null>) {
     if (!section) return;
 
     const items = section.querySelectorAll<HTMLElement>(
-      ".reveal-up, .reveal-scale"
+      ".reveal-up, .reveal-scale",
     );
     const observer = new IntersectionObserver(
       (entries) => {
@@ -21,7 +22,7 @@ function useReveal(sectionRef: React.RefObject<HTMLElement | null>) {
           }
         });
       },
-      { threshold: 0.08 }
+      { threshold: 0.08 },
     );
 
     items.forEach((item) => observer.observe(item));
@@ -66,23 +67,22 @@ export default function Bento() {
           Row 3: D(4) + E(8) = 12
         */}
         <div className="grid grid-cols-1 lg:grid-cols-12 lg:grid-flow-dense gap-3 lg:gap-4 auto-rows-[280px] lg:auto-rows-[260px]">
-
           {/* Card A — hero image, row-span-2 */}
           <div
             className="col-span-1 lg:col-span-7 lg:row-span-2 reveal-scale"
             data-delay="100"
           >
             {/* Double-bezel outer shell */}
-            <div className="h-full p-2 rounded-[2rem] bg-[#1c2b1a]/5 ring-1 ring-[#1c2b1a]/9">
+            <div className="h-full p-2 rounded-4xl bg-[#1c2b1a]/5 ring-1 ring-[#1c2b1a]/9">
               {/* Inner core */}
-              <div className="relative h-full rounded-[calc(2rem-8px)] overflow-hidden bg-[#1c2b1a]">
+              <div className="relative h-full rounded-3xl overflow-hidden bg-[#1c2b1a]">
                 <img
                   src="https://picsum.photos/seed/aerial-garden/800/600"
                   alt="The Ashwood Estate aerial view"
-                  className="absolute inset-0 w-full h-full object-cover opacity-78 transition-transform duration-[1200ms] ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover opacity-78 transition-transform duration-1200 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-105"
                   style={{ filter: "contrast(1.1) saturate(0.88)" }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1c2b1a]/85 via-[#1c2b1a]/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#1c2b1a]/85 via-[#1c2b1a]/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between">
                   <div>
                     <p className="text-[#c8a84b] text-[9px] uppercase tracking-[0.22em] mb-1.5">
@@ -110,8 +110,8 @@ export default function Bento() {
 
           {/* Card B — Landscape Architecture */}
           <div className="col-span-1 lg:col-span-5 reveal-up" data-delay="140">
-            <div className="h-full p-2 rounded-[2rem] bg-[#1c2b1a] ring-1 ring-[#1c2b1a]">
-              <div className="h-full rounded-[calc(2rem-8px)] p-7 flex flex-col justify-between bg-[#2e4528] shadow-[inset_0_1px_1px_rgba(255,255,255,0.06)]">
+            <div className="h-full p-2 rounded-4xl bg-[#1c2b1a] ring-1 ring-[#1c2b1a]">
+              <div className="h-full rounded-3xl p-7 flex flex-col justify-between bg-[#2e4528] shadow-[inset_0_1px_1px_rgba(255,255,255,0.06)]">
                 <div>
                   <span className="inline-block rounded-full px-3 py-1 text-[9px] uppercase tracking-[0.2em] font-medium bg-white/10 text-white/55 mb-5">
                     Specialty
@@ -137,8 +137,8 @@ export default function Bento() {
 
           {/* Card C — Awards */}
           <div className="col-span-1 lg:col-span-5 reveal-up" data-delay="190">
-            <div className="h-full p-2 rounded-[2rem] bg-[#c8a84b]/10 ring-1 ring-[#c8a84b]/22">
-              <div className="h-full rounded-[calc(2rem-8px)] p-7 flex flex-col justify-between bg-[#fdfbf7] shadow-[inset_0_1px_1px_rgba(255,255,255,0.85)]">
+            <div className="h-full p-2 rounded-4xl bg-[#c8a84b]/10 ring-1 ring-[#c8a84b]/22">
+              <div className="h-full rounded-3xl p-7 flex flex-col justify-between bg-[#fdfbf7] shadow-[inset_0_1px_1px_rgba(255,255,255,0.85)]">
                 <div>
                   <span className="inline-block rounded-full px-3 py-1 text-[9px] uppercase tracking-[0.2em] font-medium bg-[#c8a84b]/14 text-[#8b7232] mb-5">
                     Recognition
@@ -160,8 +160,8 @@ export default function Bento() {
 
           {/* Card D — Brand statement */}
           <div className="col-span-1 lg:col-span-4 reveal-up" data-delay="240">
-            <div className="h-full p-2 rounded-[2rem] bg-[#1c2b1a] ring-1 ring-[#1c2b1a]">
-              <div className="relative h-full rounded-[calc(2rem-8px)] overflow-hidden">
+            <div className="h-full p-2 rounded-4xl bg-[#1c2b1a] ring-1 ring-[#1c2b1a]">
+              <div className="relative h-full rounded-3xl overflow-hidden">
                 <img
                   src="https://picsum.photos/seed/moss-stone/400/300"
                   alt=""
@@ -173,7 +173,7 @@ export default function Bento() {
                 />
                 <div className="relative z-10 h-full p-7 flex flex-col justify-between">
                   <p className="font-serif text-white/90 text-xl font-medium italic leading-snug">
-                    "Where nature becomes living architecture."
+                    {"Where nature becomes living architecture."}
                   </p>
                   <p className="text-white/35 text-[9px] uppercase tracking-[0.22em]">
                     Verdant Studio
@@ -185,12 +185,12 @@ export default function Bento() {
 
           {/* Card E — Client voice */}
           <div className="col-span-1 lg:col-span-8 reveal-up" data-delay="290">
-            <div className="h-full p-2 rounded-[2rem] bg-[#4a7040]/7 ring-1 ring-[#4a7040]/14">
-              <div className="h-full rounded-[calc(2rem-8px)] p-7 flex flex-col justify-between bg-white shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)]">
+            <div className="h-full p-2 rounded-4xl bg-[#4a7040]/7 ring-1 ring-[#4a7040]/14">
+              <div className="h-full rounded-3xl p-7 flex flex-col justify-between bg-white shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)]">
                 <p className="font-serif text-[#1c2b1a] text-xl md:text-2xl font-medium leading-relaxed">
-                  "Verdant transformed our estate beyond what we imagined
-                  possible. The level of craft and attention is truly
-                  unmatched."
+                  {
+                    "Verdant transformed our estate beyond what we imagined possible. The level of craft and attention is truly unmatched."
+                  }
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-[#1c2b1a]/10 shrink-0">

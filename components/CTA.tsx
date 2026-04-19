@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -10,7 +11,7 @@ export default function CTA() {
     if (!section) return;
 
     const items = section.querySelectorAll<HTMLElement>(
-      ".reveal-up, .reveal-scale"
+      ".reveal-up, .reveal-scale",
     );
     const observer = new IntersectionObserver(
       (entries) => {
@@ -23,7 +24,7 @@ export default function CTA() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     items.forEach((item) => observer.observe(item));
@@ -39,7 +40,7 @@ export default function CTA() {
       <div className="max-w-7xl mx-auto">
         {/* Double-bezel CTA block */}
         <div className="p-2 rounded-[2.5rem] bg-[#1c2b1a] ring-1 ring-[#1c2b1a]">
-          <div className="relative rounded-[calc(2.5rem-8px)] overflow-hidden bg-[#2e4528] shadow-[inset_0_1px_1px_rgba(255,255,255,0.055)] px-8 py-24 md:py-36 md:px-20 flex flex-col items-center text-center">
+          <div className="relative rounded-4xl overflow-hidden bg-[#2e4528] shadow-[inset_0_1px_1px_rgba(255,255,255,0.055)] px-8 py-24 md:py-36 md:px-20 flex flex-col items-center text-center">
             {/* Ambient radial glow */}
             <div
               className="absolute inset-0 pointer-events-none"

@@ -16,7 +16,7 @@ export default function Hero() {
   const visible = "opacity-100 translate-y-0";
 
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-[#fdfbf7]">
+    <section className="relative min-h-dvh flex items-center justify-center overflow-hidden bg-[#fdfbf7]">
       {/* ── Video background ── */}
       <div className="absolute inset-0">
         <video
@@ -55,7 +55,6 @@ export default function Hero() {
 
       {/* ── Centred content ── */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-5xl mx-auto">
-
         {/* Eyebrow */}
         <div
           className={`${base} ${loaded ? visible : hidden} mb-8`}
@@ -125,7 +124,7 @@ export default function Hero() {
         <span className="text-[#1c2b1a] text-[9px] uppercase tracking-[0.35em]">
           Scroll
         </span>
-        <div className="w-px h-9 bg-gradient-to-b from-[#1c2b1a]/60 to-transparent" />
+        <div className="w-px h-9 bg-linear-to-b from-[#1c2b1a]/60 to-transparent" />
       </div>
     </section>
   );
