@@ -60,7 +60,7 @@ export default function Hero() {
           className={`${base} ${loaded ? visible : hidden} mb-8`}
           style={{ transitionDelay: "0ms" }}
         >
-          <span className="inline-block rounded-full px-4 py-1.5 text-[10px] uppercase tracking-[0.25em] font-medium bg-gold/18 text-gold border border-gold/30">
+          <span className="inline-block rounded-full px-4 py-1.5 text-[10px] uppercase tracking-[0.25em] font-medium bg-gold text-white border border-sage-light/40">
             Award-Winning Landscape Design
           </span>
         </div>
