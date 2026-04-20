@@ -5,6 +5,10 @@ import { useState, useEffect } from "react";
 
 const links = ["Services", "Portfolio", "Process", "About"];
 
+const linkHrefs: Record<string, string> = {
+  About: "/about",
+};
+
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -53,7 +57,7 @@ export default function Nav() {
           {links.map((link) => (
             <a
               key={link}
-              href={`/#${link.toLowerCase()}`}
+              href={linkHrefs[link] ?? `/#${link.toLowerCase()}`}
               className={`text-xs font-medium tracking-wide px-4 py-2 rounded-full transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
                 scrolled
                   ? "text-white/65 hover:text-white hover:bg-white/8"
@@ -122,7 +126,7 @@ export default function Nav() {
           {links.map((link, i) => (
             <a
               key={link}
-              href={`/#${link.toLowerCase()}`}
+              href={linkHrefs[link] ?? `/#${link.toLowerCase()}`}
               onClick={() => setOpen(false)}
               className={`font-serif text-5xl sm:text-6xl font-medium text-white/90 hover:text-gold transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] ${
                 open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"

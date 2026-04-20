@@ -1,6 +1,6 @@
 const footerLinks: Record<string, Array<{ label: string; href: string }>> = {
   Studio: [
-    { label: "About", href: "#" },
+    { label: "About", href: "/about" },
     { label: "Team", href: "#" },
     { label: "Awards", href: "#" },
     { label: "Press", href: "#" },
