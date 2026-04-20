@@ -12,7 +12,9 @@ export default function ServicePage({ service }: { service: ServiceData }) {
   useEffect(() => {
     const page = pageRef.current;
     if (!page) return;
-    const items = page.querySelectorAll<HTMLElement>(".reveal-up, .reveal-scale");
+    const items = page.querySelectorAll<HTMLElement>(
+      ".reveal-up, .reveal-scale",
+    );
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -32,7 +34,6 @@ export default function ServicePage({ service }: { service: ServiceData }) {
 
   return (
     <div ref={pageRef} className="bg-cream overflow-x-hidden">
-
       {/* ── 1. HERO ───────────────────────────────────────────── */}
       <section className="relative min-h-dvh flex items-center justify-center overflow-hidden">
         <img
@@ -50,7 +51,9 @@ export default function ServicePage({ service }: { service: ServiceData }) {
         />
         <div
           className="absolute bottom-0 left-0 right-0 h-48 pointer-events-none"
-          style={{ background: "linear-gradient(to bottom, transparent, #fdfbf7)" }}
+          style={{
+            background: "linear-gradient(to bottom, transparent, #fdfbf7)",
+          }}
         />
 
         <div className="relative z-10 flex flex-col items-center text-center px-4 md:px-8 max-w-5xl mx-auto">
@@ -127,7 +130,9 @@ export default function ServicePage({ service }: { service: ServiceData }) {
                 <span className="mt-0.5 w-5 h-5 rounded-full bg-gold/20 border border-gold/40 flex items-center justify-center text-gold text-[9px] shrink-0">
                   ✓
                 </span>
-                <span className="text-forest/72 text-sm leading-snug">{feature}</span>
+                <span className="text-forest/72 text-sm leading-snug">
+                  {feature}
+                </span>
               </div>
             ))}
           </div>
@@ -198,7 +203,9 @@ export default function ServicePage({ service }: { service: ServiceData }) {
                   <h3 className="font-serif text-forest text-xl font-semibold mb-3 leading-tight">
                     {step.title}
                   </h3>
-                  <p className="text-forest/55 text-sm leading-relaxed">{step.body}</p>
+                  <p className="text-forest/55 text-sm leading-relaxed">
+                    {step.body}
+                  </p>
                 </div>
               </div>
             ))}
@@ -235,58 +242,68 @@ export default function ServicePage({ service }: { service: ServiceData }) {
             className="reveal-scale grid grid-cols-1 md:grid-cols-3 md:auto-rows-[260px] gap-4"
             data-delay="150"
           >
-            <div className="md:col-span-2 md:row-span-2 rounded-4xl overflow-hidden h-[300px] md:h-auto relative group">
+            <div className="md:col-span-2 md:row-span-2 rounded-4xl overflow-hidden h-75 md:h-auto relative group">
               <img
                 src={`https://picsum.photos/seed/${service.gallery[0].seed}/1200/800`}
                 alt={service.gallery[0].alt}
                 className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-[1.03]"
               />
               <div className="absolute bottom-0 left-0 right-0 p-5 bg-linear-to-t from-forest/65 to-transparent">
-                <p className="text-white/88 text-xs font-medium">{service.gallery[0].caption}</p>
+                <p className="text-white/88 text-xs font-medium">
+                  {service.gallery[0].caption}
+                </p>
               </div>
             </div>
 
-            <div className="rounded-3xl overflow-hidden h-[220px] md:h-auto relative group">
+            <div className="rounded-3xl overflow-hidden h-55 md:h-auto relative group">
               <img
                 src={`https://picsum.photos/seed/${service.gallery[1].seed}/600/400`}
                 alt={service.gallery[1].alt}
                 className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-[1.04]"
               />
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-forest/65 to-transparent">
-                <p className="text-white/88 text-xs font-medium">{service.gallery[1].caption}</p>
+                <p className="text-white/88 text-xs font-medium">
+                  {service.gallery[1].caption}
+                </p>
               </div>
             </div>
 
-            <div className="rounded-3xl overflow-hidden h-[220px] md:h-auto relative group">
+            <div className="rounded-3xl overflow-hidden h-55 md:h-auto relative group">
               <img
                 src={`https://picsum.photos/seed/${service.gallery[2].seed}/600/400`}
                 alt={service.gallery[2].alt}
                 className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-[1.04]"
               />
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-forest/65 to-transparent">
-                <p className="text-white/88 text-xs font-medium">{service.gallery[2].caption}</p>
+                <p className="text-white/88 text-xs font-medium">
+                  {service.gallery[2].caption}
+                </p>
               </div>
             </div>
 
-            <div className="rounded-3xl overflow-hidden h-[220px] md:h-auto relative group">
+            <div className="rounded-3xl overflow-hidden h-55 md:h-auto relative group">
               <img
                 src={`https://picsum.photos/seed/${service.gallery[3].seed}/400/300`}
                 alt={service.gallery[3].alt}
                 className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-[1.04]"
               />
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-forest/65 to-transparent">
-                <p className="text-white/88 text-xs font-medium">{service.gallery[3].caption}</p>
+                <p className="text-white/88 text-xs font-medium">
+                  {service.gallery[3].caption}
+                </p>
               </div>
             </div>
 
-            <div className="md:col-span-2 rounded-3xl overflow-hidden h-[220px] md:h-auto relative group">
+            <div className="md:col-span-2 rounded-3xl overflow-hidden h-55 md:h-auto relative group">
               <img
                 src={`https://picsum.photos/seed/${service.gallery[4].seed}/900/400`}
                 alt={service.gallery[4].alt}
                 className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-[1.03]"
               />
               <div className="absolute bottom-0 left-0 right-0 p-5 bg-linear-to-t from-forest/65 to-transparent">
-                <p className="text-white/88 text-xs font-medium">{service.gallery[4].caption}</p>
+                <p className="text-white/88 text-xs font-medium">
+                  {service.gallery[4].caption}
+                </p>
               </div>
             </div>
           </div>
@@ -296,7 +313,9 @@ export default function ServicePage({ service }: { service: ServiceData }) {
       {/* ── 6. CTA BANNER 2 — REQUEST CALL BACK ──────────────── */}
       <section
         className="py-28 px-4 md:px-8 lg:px-16"
-        style={{ background: "linear-gradient(135deg, #1c2b1a 0%, #2e4528 100%)" }}
+        style={{
+          background: "linear-gradient(135deg, #1c2b1a 0%, #2e4528 100%)",
+        }}
       >
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
           <div className="text-center lg:text-left">
@@ -374,7 +393,9 @@ export default function ServicePage({ service }: { service: ServiceData }) {
                   <h3 className="font-serif text-forest text-xl font-semibold mb-3 leading-tight">
                     {benefit.title}
                   </h3>
-                  <p className="text-forest/55 text-sm leading-relaxed">{benefit.body}</p>
+                  <p className="text-forest/55 text-sm leading-relaxed">
+                    {benefit.body}
+                  </p>
                 </div>
               </div>
             ))}
@@ -423,8 +444,12 @@ export default function ServicePage({ service }: { service: ServiceData }) {
                     +
                   </span>
                 </button>
-                <div className={`accordion-content px-8 ${openFaq === i ? "open" : ""}`}>
-                  <p className="text-forest/60 text-sm leading-relaxed pb-6">{item.a}</p>
+                <div
+                  className={`accordion-content px-8 ${openFaq === i ? "open" : ""}`}
+                >
+                  <p className="text-forest/60 text-sm leading-relaxed pb-6">
+                    {item.a}
+                  </p>
                 </div>
               </div>
             ))}
@@ -436,9 +461,7 @@ export default function ServicePage({ service }: { service: ServiceData }) {
       <section className="py-32 md:py-40 px-4 md:px-8 lg:px-16 bg-cream">
         <div className="max-w-7xl mx-auto">
           <div className="p-2 rounded-4xl bg-forest ring-1 ring-forest">
-            <div
-              className="relative rounded-3xl overflow-hidden bg-forest-mid shadow-[inset_0_1px_1px_rgba(255,255,255,0.055)] px-8 py-24 md:py-36 md:px-20 flex flex-col items-center text-center"
-            >
+            <div className="relative rounded-3xl overflow-hidden bg-forest-mid shadow-[inset_0_1px_1px_rgba(255,255,255,0.055)] px-8 py-24 md:py-36 md:px-20 flex flex-col items-center text-center">
               <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
