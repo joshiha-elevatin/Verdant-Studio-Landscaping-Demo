@@ -2,47 +2,53 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 
 const services = [
   {
     index: "01",
-    title: "Garden Architecture",
-    tagline: "Spatial planning for outdoor rooms",
+    title: "Lawn Mowing",
+    tagline: "Precision cutting, on a schedule that suits your lawn",
     description:
-      "We approach garden design as architectural practice — every path, terrace, and planted border considered as part of a cohesive spatial composition. From formal parterres to naturalistic meadow planting, each project begins with understanding the land's inherent character.",
-    image: "https://picsum.photos/seed/garden-arch/600/400",
+      "We take the guesswork and hard work out of lawn care. Our experienced team visits on a schedule that suits your lawn's growth cycle — cutting to the right height, edging borders cleanly, and leaving your grass healthy and stripe-perfect every time.",
+    image: "https://picsum.photos/seed/lawn-summer-garden/600/400",
+    href: "/services/lawn-mowing",
   },
   {
     index: "02",
-    title: "Hardscape & Paving",
-    tagline: "Precision stonework and structural elements",
+    title: "Garden Design",
+    tagline: "Bespoke outdoor spaces, designed to endure",
     description:
-      "Natural stone terraces, bespoke joinery, retaining walls, and structural elements built to endure. We work with heritage materials alongside contemporary finishes to create surfaces that age with dignity and develop their own patina over time.",
-    image: "https://picsum.photos/seed/stone-path/600/400",
+      "Great garden design is about understanding how you live — and translating that into a space that flows beautifully, feels personal, and works through every season. Every element, from the paving pattern to the final shrub placement, is considered and intentional.",
+    image: "https://picsum.photos/seed/luxury-garden-design/600/400",
+    href: "/services/garden-design",
   },
   {
     index: "03",
-    title: "Pool & Water Features",
-    tagline: "Reflective water as a design element",
+    title: "Paving & Landscaping",
+    tagline: "Premium surfaces and structural elements, built to last",
     description:
-      "From formal reflecting pools to naturalistic swimming ponds and animated fountains, we integrate water as a sensory and visual anchor. Each water feature is designed to complement its setting — never as spectacle for its own sake.",
-    image: "https://picsum.photos/seed/luxury-pool/600/400",
+      "The hard landscaping in your garden sets the tone for everything else. Our construction team combines traditional stonemasonry skills with modern drainage engineering, using materials sourced from the best UK and European quarries.",
+    image: "https://picsum.photos/seed/yorkstone-patio-garden/600/400",
+    href: "/services/paving-landscaping",
   },
   {
     index: "04",
-    title: "Outdoor Lighting",
-    tagline: "Illumination that transforms after dark",
+    title: "Hedge Trimming",
+    tagline: "Expert hedge care, species-timed and immaculate",
     description:
-      "Considered lighting schemes that reveal texture, highlight specimen planting, and create drama after sunset. All systems are energy-efficient, sympathetic to local ecology, and designed to minimise light pollution while maximising atmosphere.",
-    image: "https://picsum.photos/seed/garden-night/600/400",
+      "A well-kept hedge is the backbone of a great garden — structure, privacy, and a crisp backdrop for everything else. We work to seasonal schedules, cutting each species at exactly the right point in the year for dense, healthy regrowth and clean lines.",
+    image: "https://picsum.photos/seed/formal-yew-hedge/600/400",
+    href: "/services/hedge-trimming",
   },
   {
     index: "05",
-    title: "Planting & Horticulture",
-    tagline: "Curated plant communities that evolve",
+    title: "Commercial Landscaping",
+    tagline: "Grounds maintenance for businesses and estates",
     description:
-      "We design planting with an ecological conscience — species-rich communities that support biodiversity, evolve through seasons, and reward close inspection year after year. Our planting is never static; it is designed to mature and deepen over decades.",
-    image: "https://picsum.photos/seed/flower-garden/600/400",
+      "First impressions matter. We provide structured, contract-based grounds maintenance programmes for offices, retail parks, housing developments, hotels, and private estates — consistent, high-quality results under a single point of contact.",
+    image: "https://picsum.photos/seed/corporate-campus-grounds/600/400",
+    href: "/services/commercial-landscaping",
   },
 ];
 
@@ -155,13 +161,30 @@ export default function Services() {
               </button>
 
               {/* Expandable content */}
-              <div
-                className={`accordion-content ${activeIndex === i ? "open" : ""}`}
-              >
+              <div className={`accordion-content ${activeIndex === i ? "open" : ""}`}>
                 <div className="pb-12 pl-14 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                  <p className="text-sage-muted leading-relaxed text-sm md:text-base">
-                    {service.description}
-                  </p>
+                  <div className="flex flex-col gap-6">
+                    <p className="text-sage-muted leading-relaxed text-sm md:text-base">
+                      {service.description}
+                    </p>
+                    <div className="flex items-center gap-4">
+                      <Link
+                        href={service.href}
+                        className="group/btn flex items-center gap-2 rounded-full bg-forest text-white px-5 py-2.5 text-xs font-semibold tracking-wide transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-forest-mid active:scale-[0.97]"
+                      >
+                        View full service
+                        <span className="w-6 h-6 rounded-full bg-white/12 flex items-center justify-center group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-px transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
+                          ↗
+                        </span>
+                      </Link>
+                      <Link
+                        href="/contact"
+                        className="text-sage-muted hover:text-forest text-xs font-medium transition-colors duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
+                      >
+                        Get a quote →
+                      </Link>
+                    </div>
+                  </div>
                   <div className="rounded-2xl overflow-hidden h-52 md:h-60">
                     <img
                       src={service.image}

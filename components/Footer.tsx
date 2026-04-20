@@ -1,7 +1,23 @@
-const footerLinks: Record<string, string[]> = {
-  Studio: ["About", "Team", "Awards", "Press"],
-  Services: ["Garden Architecture", "Hardscape", "Lighting", "Water Features"],
-  Connect: ["Contact", "Instagram", "LinkedIn", "Careers"],
+const footerLinks: Record<string, Array<{ label: string; href: string }>> = {
+  Studio: [
+    { label: "About", href: "#" },
+    { label: "Team", href: "#" },
+    { label: "Awards", href: "#" },
+    { label: "Press", href: "#" },
+  ],
+  Services: [
+    { label: "Lawn Mowing", href: "/services/lawn-mowing" },
+    { label: "Garden Design", href: "/services/garden-design" },
+    { label: "Paving & Landscaping", href: "/services/paving-landscaping" },
+    { label: "Hedge Trimming", href: "/services/hedge-trimming" },
+    { label: "Commercial", href: "/services/commercial-landscaping" },
+  ],
+  Connect: [
+    { label: "Contact", href: "/contact" },
+    { label: "Instagram", href: "#" },
+    { label: "LinkedIn", href: "#" },
+    { label: "Careers", href: "#" },
+  ],
 };
 
 export default function Footer() {
@@ -47,12 +63,12 @@ export default function Footer() {
                 </p>
                 <ul className="space-y-3">
                   {items.map((item) => (
-                    <li key={item}>
+                    <li key={item.label}>
                       <a
-                        href="#"
+                        href={item.href}
                         className="text-white/55 hover:text-white/90 text-sm transition-colors duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
                       >
-                        {item}
+                        {item.label}
                       </a>
                     </li>
                   ))}
