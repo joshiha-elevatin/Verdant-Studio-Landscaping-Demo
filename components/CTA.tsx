@@ -101,7 +101,7 @@ export default function CTA() {
                 data-delay="300"
               >
                 <a
-                  href="mailto:studio@verdant.co"
+                  href="/contact"
                   className="group flex items-center gap-2.5 rounded-full bg-gold text-forest px-8 py-4 text-sm font-semibold tracking-wide transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-gold-hover active:scale-[0.97]"
                 >
                   Schedule a Consultation

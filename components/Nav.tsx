@@ -33,7 +33,7 @@ export default function Nav() {
       >
         {/* Logo */}
         <a
-          href="#"
+          href="/"
           className={`font-serif text-sm font-semibold tracking-tight px-4 py-2 rounded-full transition-colors duration-500 ${
             scrolled ? "text-white" : "text-forest"
           }`}
@@ -52,7 +52,7 @@ export default function Nav() {
           {links.map((link) => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
+              href={`/#${link.toLowerCase()}`}
               className={`text-xs font-medium tracking-wide px-4 py-2 rounded-full transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
                 scrolled
                   ? "text-white/65 hover:text-white hover:bg-white/8"
@@ -66,7 +66,7 @@ export default function Nav() {
 
         {/* Desktop CTA — button-in-button architecture */}
         <a
-          href="#contact"
+          href="/contact"
           className={`hidden md:flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold tracking-wide transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.97] group ${
             scrolled
               ? "bg-gold text-forest hover:bg-gold-hover"
@@ -121,7 +121,7 @@ export default function Nav() {
           {links.map((link, i) => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
+              href={`/#${link.toLowerCase()}`}
               onClick={() => setOpen(false)}
               className={`font-serif text-5xl sm:text-6xl font-medium text-white/90 hover:text-gold transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] ${
                 open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -135,7 +135,7 @@ export default function Nav() {
           ))}
 
           <a
-            href="#contact"
+            href="/contact"
             onClick={() => setOpen(false)}
             className={`mt-8 flex items-center gap-2.5 rounded-full bg-gold text-forest px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.97] group ${
               open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
