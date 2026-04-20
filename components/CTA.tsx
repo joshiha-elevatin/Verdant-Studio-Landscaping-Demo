@@ -35,18 +35,18 @@ export default function CTA() {
     <section
       ref={sectionRef}
       id="contact"
-      className="py-32 md:py-40 px-4 md:px-8 lg:px-16 bg-[#fdfbf7]"
+      className="py-32 md:py-40 px-4 md:px-8 lg:px-16 bg-cream"
     >
       <div className="max-w-7xl mx-auto">
         {/* Double-bezel CTA block */}
-        <div className="p-2 rounded-[2.5rem] bg-[#1c2b1a] ring-1 ring-[#1c2b1a]">
-          <div className="relative rounded-4xl overflow-hidden bg-[#2e4528] shadow-[inset_0_1px_1px_rgba(255,255,255,0.055)] px-8 py-24 md:py-36 md:px-20 flex flex-col items-center text-center">
+        <div className="p-2 rounded-[2.5rem] bg-forest ring-1 ring-forest">
+          <div className="relative rounded-4xl overflow-hidden bg-forest-mid shadow-[inset_0_1px_1px_rgba(255,255,255,0.055)] px-8 py-24 md:py-36 md:px-20 flex flex-col items-center text-center">
             {/* Ambient radial glow */}
             <div
               className="absolute inset-0 pointer-events-none"
               style={{
                 background:
-                  "radial-gradient(ellipse 70% 50% at 50% 65%, rgba(200,168,75,0.11) 0%, transparent 70%)",
+                  "radial-gradient(ellipse 70% 50% at 50% 65%, rgba(240,192,64,0.11) 0%, transparent 70%)",
               }}
             />
 
@@ -66,7 +66,7 @@ export default function CTA() {
             <div className="relative z-10 flex flex-col items-center">
               {/* Eyebrow */}
               <span
-                className="reveal-up inline-block rounded-full px-4 py-1.5 text-[10px] uppercase tracking-[0.26em] font-medium bg-[#c8a84b]/18 text-[#c8a84b] border border-[#c8a84b]/28 mb-10"
+                className="reveal-up inline-block rounded-full px-4 py-1.5 text-[10px] uppercase tracking-[0.26em] font-medium bg-gold/18 text-gold border border-gold/28 mb-10"
                 data-delay="0"
               >
                 Begin Your Journey
@@ -80,7 +80,7 @@ export default function CTA() {
               >
                 Your landscape deserves
                 <br />
-                <em className="not-italic text-[#c8a84b]">
+                <em className="not-italic text-gold">
                   nothing less than extraordinary
                 </em>
               </h2>
@@ -102,10 +102,10 @@ export default function CTA() {
               >
                 <a
                   href="mailto:studio@verdant.co"
-                  className="group flex items-center gap-2.5 rounded-full bg-[#c8a84b] text-[#1c2b1a] px-8 py-4 text-sm font-semibold tracking-wide transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-[#d4b355] active:scale-[0.97]"
+                  className="group flex items-center gap-2.5 rounded-full bg-gold text-forest px-8 py-4 text-sm font-semibold tracking-wide transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-gold-hover active:scale-[0.97]"
                 >
                   Schedule a Consultation
-                  <span className="w-8 h-8 rounded-full bg-[#1c2b1a]/14 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
+                  <span className="w-8 h-8 rounded-full bg-forest/14 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
                     ↗
                   </span>
                 </a>

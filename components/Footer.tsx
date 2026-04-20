@@ -6,7 +6,7 @@ const footerLinks: Record<string, string[]> = {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1c2b1a] px-4 md:px-8 lg:px-16 pt-20 pb-10">
+    <footer className="bg-forest px-4 md:px-8 lg:px-16 pt-20 pb-10">
       <div className="max-w-7xl mx-auto">
         {/* Top row */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-16 pb-16 border-b border-white/8">

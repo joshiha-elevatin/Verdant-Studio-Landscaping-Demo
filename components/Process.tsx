@@ -63,14 +63,14 @@ export default function Process() {
     <section
       ref={sectionRef}
       id="process"
-      className="py-32 md:py-48 px-4 md:px-8 lg:px-16 bg-[#1c2b1a]"
+      className="py-32 md:py-48 px-4 md:px-8 lg:px-16 bg-forest"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-24">
           <div>
             <span
-              className="reveal-up inline-block rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.22em] font-medium bg-white/8 text-[#c8a84b] mb-5"
+              className="reveal-up inline-block rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.22em] font-medium bg-white/8 text-gold mb-5"
               data-delay="0"
             >
               How We Work
@@ -139,11 +139,11 @@ export default function Process() {
           </p>
           <a
             href="#contact"
-            className="reveal-up group flex items-center gap-2.5 rounded-full bg-[#c8a84b] text-[#1c2b1a] px-7 py-4 text-sm font-semibold tracking-wide transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-[#d4b355] active:scale-[0.97] shrink-0"
+            className="reveal-up group flex items-center gap-2.5 rounded-full bg-gold text-forest px-7 py-4 text-sm font-semibold tracking-wide transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-gold-hover active:scale-[0.97] shrink-0"
             data-delay="80"
           >
             Schedule a Consultation
-            <span className="w-7 h-7 rounded-full bg-[#1c2b1a]/14 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
+            <span className="w-7 h-7 rounded-full bg-forest/14 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
               ↗
             </span>
           </a>

@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
-:root {
-  --background: #fdfbf7;
-  --foreground: #1a1a1a;
+/* ── Brand colour system ─────────────────────────────────────────── */
+@theme {
+  /* Forest greens */
+  --color-forest:     #1c2b1a;
+  --color-forest-mid: #2e4528;
+
+  /* Sage greens */
+  --color-sage:       #4a7040;
+  --color-sage-light: #8baf7c;
+  --color-sage-muted: #5c6b5a;
+
+  /* Gold accent — brighter than the original muted #c8a84b */
+  --color-gold:       #f0c040;
+  --color-gold-hover: #f8cc50;
+  --color-gold-dark:  #8b7232;
+
+  /* Cream backgrounds */
+  --color-cream:      #fdfbf7;
+  --color-cream-warm: #f5f1eb;
 }
 
+/* ── Font wiring (inline = no extra CSS custom properties emitted) ── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans:  var(--font-geist-sans);
+  --font-mono:  var(--font-geist-mono);
   --font-serif: var(--font-playfair);
 }
 
 body {
-  background: #fdfbf7;
+  background: var(--color-cream);
   color: #1a1a1a;
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   overflow-x: hidden;
 }
 
-/* Film grain — fixed, pointer-events-none, never on scrolling content */
+/* ── Film grain — fixed, pointer-events-none, never on scrolling content ── */
 .grain-overlay {
   position: fixed;
   inset: 0;
@@ -31,7 +46,7 @@ body {
   background-repeat: repeat;
 }
 
-/* ── Scroll reveal ── */
+/* ── Scroll reveal ─────────────────────────────────────────────────── */
 .reveal-up {
   opacity: 0;
   transform: translateY(48px);
@@ -61,10 +76,10 @@ body {
   transform: scale(1);
 }
 
-/* ── Marquee ── */
+/* ── Marquee ─────────────────────────────────────────────────────── */
 @keyframes marquee-scroll {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to   { transform: translateX(-50%); }
 }
 
 .animate-marquee {
@@ -76,7 +91,7 @@ body {
   animation-play-state: paused;
 }
 
-/* ── Accordion ── */
+/* ── Accordion ───────────────────────────────────────────────────── */
 .accordion-content {
   max-height: 0;
   overflow: hidden;

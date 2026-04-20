@@ -11,7 +11,7 @@ const items = [
 
 export default function Marquee() {
   return (
-    <div className="relative overflow-hidden py-5 bg-[#1c2b1a] border-y border-white/6">
+    <div className="relative overflow-hidden py-5 bg-forest border-y border-white/6">
       <div className="animate-marquee flex">
         {[...items, ...items].map((item, i) => (
           <div
@@ -21,7 +21,7 @@ export default function Marquee() {
             <span className="text-white/65 text-[11px] font-medium tracking-[0.14em] uppercase">
               {item}
             </span>
-            <span className="text-[#c8a84b] text-sm leading-none">◆</span>
+            <span className="text-gold text-sm leading-none">◆</span>
           </div>
         ))}
       </div>

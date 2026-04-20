@@ -38,19 +38,19 @@ export default function Bento() {
     <section
       ref={sectionRef}
       id="portfolio"
-      className="py-32 md:py-48 px-4 md:px-8 lg:px-16 bg-[#fdfbf7]"
+      className="py-32 md:py-48 px-4 md:px-8 lg:px-16 bg-cream"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="mb-16">
           <span
-            className="reveal-up inline-block rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.22em] font-medium bg-[#1c2b1a]/7 text-[#4a7040] mb-5"
+            className="reveal-up inline-block rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.22em] font-medium bg-forest/7 text-sage mb-5"
             data-delay="0"
           >
             Our Work
           </span>
           <h2
-            className="reveal-up font-serif text-[#1c2b1a] font-bold leading-tight"
+            className="reveal-up font-serif text-forest font-bold leading-tight"
             style={{ fontSize: "clamp(2.2rem, 4vw, 3.8rem)" }}
             data-delay="80"
           >
@@ -73,19 +73,19 @@ export default function Bento() {
             data-delay="100"
           >
             {/* Double-bezel outer shell */}
-            <div className="h-full p-2 rounded-4xl bg-[#1c2b1a]/5 ring-1 ring-[#1c2b1a]/9">
+            <div className="h-full p-2 rounded-4xl bg-forest/5 ring-1 ring-forest/9">
               {/* Inner core */}
-              <div className="relative h-full rounded-3xl overflow-hidden bg-[#1c2b1a]">
+              <div className="relative h-full rounded-3xl overflow-hidden bg-forest">
                 <img
                   src="https://picsum.photos/seed/aerial-garden/800/600"
                   alt="The Ashwood Estate aerial view"
                   className="absolute inset-0 w-full h-full object-cover opacity-78 transition-transform duration-1200 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-105"
                   style={{ filter: "contrast(1.1) saturate(0.88)" }}
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-[#1c2b1a]/85 via-[#1c2b1a]/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-forest/85 via-forest/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between">
                   <div>
-                    <p className="text-[#c8a84b] text-[9px] uppercase tracking-[0.22em] mb-1.5">
+                    <p className="text-gold text-[9px] uppercase tracking-[0.22em] mb-1.5">
                       Featured Project
                     </p>
                     <h3 className="font-serif text-white text-2xl font-semibold">
@@ -110,8 +110,8 @@ export default function Bento() {
 
           {/* Card B — Landscape Architecture */}
           <div className="col-span-1 lg:col-span-5 reveal-up" data-delay="140">
-            <div className="h-full p-2 rounded-4xl bg-[#1c2b1a] ring-1 ring-[#1c2b1a]">
-              <div className="h-full rounded-3xl p-7 flex flex-col justify-between bg-[#2e4528] shadow-[inset_0_1px_1px_rgba(255,255,255,0.06)]">
+            <div className="h-full p-2 rounded-4xl bg-forest ring-1 ring-forest">
+              <div className="h-full rounded-3xl p-7 flex flex-col justify-between bg-forest-mid shadow-[inset_0_1px_1px_rgba(255,255,255,0.06)]">
                 <div>
                   <span className="inline-block rounded-full px-3 py-1 text-[9px] uppercase tracking-[0.2em] font-medium bg-white/10 text-white/55 mb-5">
                     Specialty
@@ -127,7 +127,7 @@ export default function Bento() {
                     From spatial planning to final planting, every detail
                     considered as one.
                   </p>
-                  <div className="w-10 h-10 rounded-full bg-[#c8a84b] flex items-center justify-center text-[#1c2b1a] font-medium text-sm transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-110">
+                  <div className="w-10 h-10 rounded-full bg-gold flex items-center justify-center text-forest font-medium text-sm transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-110">
                     →
                   </div>
                 </div>
@@ -137,20 +137,20 @@ export default function Bento() {
 
           {/* Card C — Awards */}
           <div className="col-span-1 lg:col-span-5 reveal-up" data-delay="190">
-            <div className="h-full p-2 rounded-4xl bg-[#c8a84b]/10 ring-1 ring-[#c8a84b]/22">
-              <div className="h-full rounded-3xl p-7 flex flex-col justify-between bg-[#fdfbf7] shadow-[inset_0_1px_1px_rgba(255,255,255,0.85)]">
+            <div className="h-full p-2 rounded-4xl bg-gold/10 ring-1 ring-gold/22">
+              <div className="h-full rounded-3xl p-7 flex flex-col justify-between bg-cream shadow-[inset_0_1px_1px_rgba(255,255,255,0.85)]">
                 <div>
-                  <span className="inline-block rounded-full px-3 py-1 text-[9px] uppercase tracking-[0.2em] font-medium bg-[#c8a84b]/14 text-[#8b7232] mb-5">
+                  <span className="inline-block rounded-full px-3 py-1 text-[9px] uppercase tracking-[0.2em] font-medium bg-gold/14 text-gold-dark mb-5">
                     Recognition
                   </span>
-                  <p className="font-serif text-[#1c2b1a] text-5xl font-bold">
+                  <p className="font-serif text-forest text-5xl font-bold">
                     18
                   </p>
-                  <p className="text-[#5c6b5a] text-sm mt-1.5 font-medium">
+                  <p className="text-sage-muted text-sm mt-1.5 font-medium">
                     Industry Awards
                   </p>
                 </div>
-                <p className="text-[#5c6b5a] text-xs leading-relaxed">
+                <p className="text-sage-muted text-xs leading-relaxed">
                   BALI National Landscape Awards, RHS Chelsea Flower Show, and
                   more.
                 </p>
@@ -160,7 +160,7 @@ export default function Bento() {
 
           {/* Card D — Brand statement */}
           <div className="col-span-1 lg:col-span-4 reveal-up" data-delay="240">
-            <div className="h-full p-2 rounded-4xl bg-[#1c2b1a] ring-1 ring-[#1c2b1a]">
+            <div className="h-full p-2 rounded-4xl bg-forest ring-1 ring-forest">
               <div className="relative h-full rounded-3xl overflow-hidden">
                 <img
                   src="https://picsum.photos/seed/moss-stone/400/300"
@@ -185,15 +185,15 @@ export default function Bento() {
 
           {/* Card E — Client voice */}
           <div className="col-span-1 lg:col-span-8 reveal-up" data-delay="290">
-            <div className="h-full p-2 rounded-4xl bg-[#4a7040]/7 ring-1 ring-[#4a7040]/14">
+            <div className="h-full p-2 rounded-4xl bg-sage/7 ring-1 ring-sage/14">
               <div className="h-full rounded-3xl p-7 flex flex-col justify-between bg-white shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)]">
-                <p className="font-serif text-[#1c2b1a] text-xl md:text-2xl font-medium leading-relaxed">
+                <p className="font-serif text-forest text-xl md:text-2xl font-medium leading-relaxed">
                   {
                     "Verdant transformed our estate beyond what we imagined possible. The level of craft and attention is truly unmatched."
                   }
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-[#1c2b1a]/10 shrink-0">
+                  <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-forest/10 shrink-0">
                     <img
                       src="https://picsum.photos/seed/portrait-client1/80/80"
                       alt=""
@@ -201,16 +201,16 @@ export default function Bento() {
                     />
                   </div>
                   <div>
-                    <p className="text-[#1c2b1a] text-sm font-semibold">
+                    <p className="text-forest text-sm font-semibold">
                       Lady Catherine Ashmore
                     </p>
-                    <p className="text-[#8baf7c] text-xs mt-0.5">
+                    <p className="text-sage-light text-xs mt-0.5">
                       Surrey Estate, 2024
                     </p>
                   </div>
                   <div className="ml-auto flex gap-0.5">
                     {[0, 1, 2, 3, 4].map((i) => (
-                      <span key={i} className="text-[#c8a84b] text-sm">
+                      <span key={i} className="text-gold text-sm">
                         ★
                       </span>
                     ))}

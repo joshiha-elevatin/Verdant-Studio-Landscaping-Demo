@@ -16,7 +16,7 @@ export default function Hero() {
   const visible = "opacity-100 translate-y-0";
 
   return (
-    <section className="relative min-h-dvh flex items-center justify-center overflow-hidden bg-[#fdfbf7]">
+    <section className="relative min-h-dvh flex items-center justify-center overflow-hidden bg-cream">
       {/* ── Video background ── */}
       <div className="absolute inset-0">
         <video
@@ -41,16 +41,16 @@ export default function Hero() {
         {/* ── Inward masking gradients — all 4 edges fade into cream (#fdfbf7) ── */}
 
         {/* Top */}
-        <div className="absolute top-0 left-0 right-0 h-52 bg-linear-to-b from-[#fdfbf7] to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-52 bg-linear-to-b from-cream to-transparent" />
 
         {/* Bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-56 bg-linear-to-t from-[#fdfbf7] to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-56 bg-linear-to-t from-cream to-transparent" />
 
         {/* Left */}
-        <div className="absolute inset-y-0 left-0 w-40 md:w-64 bg-linear-to-r from-[#fdfbf7] to-transparent" />
+        <div className="absolute inset-y-0 left-0 w-40 md:w-64 bg-linear-to-r from-cream to-transparent" />
 
         {/* Right */}
-        <div className="absolute inset-y-0 right-0 w-40 md:w-64 bg-linear-to-l from-[#fdfbf7] to-transparent" />
+        <div className="absolute inset-y-0 right-0 w-40 md:w-64 bg-linear-to-l from-cream to-transparent" />
       </div>
 
       {/* ── Centred content ── */}
@@ -60,7 +60,7 @@ export default function Hero() {
           className={`${base} ${loaded ? visible : hidden} mb-8`}
           style={{ transitionDelay: "0ms" }}
         >
-          <span className="inline-block rounded-full px-4 py-1.5 text-[10px] uppercase tracking-[0.25em] font-medium bg-[#c8a84b]/18 text-[#c8a84b] border border-[#c8a84b]/30">
+          <span className="inline-block rounded-full px-4 py-1.5 text-[10px] uppercase tracking-[0.25em] font-medium bg-gold/18 text-gold border border-gold/30">
             Award-Winning Landscape Design
           </span>
         </div>
@@ -76,7 +76,7 @@ export default function Hero() {
         >
           Where Nature Becomes
           <br />
-          <em className="not-italic text-[#c8a84b]">Living Architecture</em>
+          <em className="not-italic text-gold">Living Architecture</em>
         </h1>
 
         {/* Subheading */}
@@ -99,10 +99,10 @@ export default function Hero() {
         >
           <a
             href="#contact"
-            className="group flex items-center gap-2.5 rounded-full bg-[#c8a84b] text-[#1c2b1a] px-7 py-4 text-sm font-semibold tracking-wide transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-[#d4b355] active:scale-[0.97]"
+            className="group flex items-center gap-2.5 rounded-full bg-gold text-forest px-7 py-4 text-sm font-semibold tracking-wide transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-gold-hover active:scale-[0.97]"
           >
             Start Your Project
-            <span className="w-7 h-7 rounded-full bg-[#1c2b1a]/14 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
+            <span className="w-7 h-7 rounded-full bg-forest/14 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-px transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
               ↗
             </span>
           </a>
@@ -121,10 +121,10 @@ export default function Hero() {
 
       {/* Scroll cue */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30 pointer-events-none">
-        <span className="text-[#1c2b1a] text-[9px] uppercase tracking-[0.35em]">
+        <span className="text-forest text-[9px] uppercase tracking-[0.35em]">
           Scroll
         </span>
-        <div className="w-px h-9 bg-linear-to-b from-[#1c2b1a]/60 to-transparent" />
+        <div className="w-px h-9 bg-linear-to-b from-forest/60 to-transparent" />
       </div>
     </section>
   );

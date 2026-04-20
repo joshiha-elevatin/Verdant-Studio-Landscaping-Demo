@@ -70,19 +70,19 @@ export default function Testimonials() {
     <section
       ref={sectionRef}
       id="testimonials"
-      className="py-32 md:py-48 px-4 md:px-8 lg:px-16 bg-[#fdfbf7]"
+      className="py-32 md:py-48 px-4 md:px-8 lg:px-16 bg-cream"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-20">
           <span
-            className="reveal-up inline-block rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.22em] font-medium bg-[#1c2b1a]/7 text-[#4a7040] mb-5"
+            className="reveal-up inline-block rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.22em] font-medium bg-forest/7 text-sage mb-5"
             data-delay="0"
           >
             Client Stories
           </span>
           <h2
-            className="reveal-up font-serif text-[#1c2b1a] font-bold leading-tight"
+            className="reveal-up font-serif text-forest font-bold leading-tight"
             style={{ fontSize: "clamp(2.2rem, 4vw, 3.8rem)" }}
             data-delay="80"
           >
@@ -95,7 +95,7 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left — quote card (double-bezel) */}
           <div className="reveal-up" data-delay="120">
-            <div className="p-2 rounded-4xl bg-[#1c2b1a]/5 ring-1 ring-[#1c2b1a]/9">
+            <div className="p-2 rounded-4xl bg-forest/5 ring-1 ring-forest/9">
               <div
                 className={`rounded-3xl bg-white shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)] p-10 min-h-72 flex flex-col justify-between transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
                   animating
@@ -104,15 +104,15 @@ export default function Testimonials() {
                 }`}
               >
                 <div>
-                  <p className="font-serif text-[#1c2b1a]/18 text-7xl leading-none mb-6 select-none">
+                  <p className="font-serif text-forest/18 text-7xl leading-none mb-6 select-none">
                     &ldquo;
                   </p>
-                  <p className="font-serif text-[#1c2b1a] text-xl md:text-2xl leading-relaxed font-medium">
+                  <p className="font-serif text-forest text-xl md:text-2xl leading-relaxed font-medium">
                     {testimonials[current].quote}
                   </p>
                 </div>
-                <div className="flex items-center gap-4 mt-10 pt-8 border-t border-[#1c2b1a]/8">
-                  <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-[#1c2b1a]/12 shrink-0">
+                <div className="flex items-center gap-4 mt-10 pt-8 border-t border-forest/8">
+                  <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-forest/12 shrink-0">
                     <img
                       src={testimonials[current].image}
                       alt={testimonials[current].author}
@@ -120,10 +120,10 @@ export default function Testimonials() {
                     />
                   </div>
                   <div>
-                    <p className="text-[#1c2b1a] font-semibold text-sm">
+                    <p className="text-forest font-semibold text-sm">
                       {testimonials[current].author}
                     </p>
-                    <p className="text-[#8baf7c] text-xs mt-0.5">
+                    <p className="text-sage-light text-xs mt-0.5">
                       {testimonials[current].role}
                     </p>
                   </div>
@@ -152,7 +152,7 @@ export default function Testimonials() {
                     aria-label={`View testimonial from ${t.author}`}
                     className={`w-14 h-14 rounded-full overflow-hidden ring-2 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
                       current === i
-                        ? "ring-[#c8a84b] scale-110 relative z-10"
+                        ? "ring-gold scale-110 relative z-10"
                         : "ring-white/80 grayscale opacity-55 hover:opacity-90 hover:grayscale-0"
                     }`}
                   >
@@ -165,10 +165,10 @@ export default function Testimonials() {
                 ))}
               </div>
               <div>
-                <p className="text-[#1c2b1a] text-sm font-medium">
+                <p className="text-forest text-sm font-medium">
                   {testimonials[current].author}
                 </p>
-                <p className="text-[#8baf7c] text-xs mt-0.5">
+                <p className="text-sage-light text-xs mt-0.5">
                   {testimonials[current].role}
                 </p>
               </div>
@@ -179,18 +179,18 @@ export default function Testimonials() {
               <button
                 onClick={() => navigate(-1)}
                 aria-label="Previous testimonial"
-                className="w-11 h-11 rounded-full border border-[#1c2b1a]/18 flex items-center justify-center text-[#1c2b1a] hover:bg-[#1c2b1a] hover:text-white hover:border-[#1c2b1a] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.95]"
+                className="w-11 h-11 rounded-full border border-forest/18 flex items-center justify-center text-forest hover:bg-forest hover:text-white hover:border-forest transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.95]"
               >
                 ←
               </button>
               <button
                 onClick={() => navigate(1)}
                 aria-label="Next testimonial"
-                className="w-11 h-11 rounded-full bg-[#1c2b1a] flex items-center justify-center text-white hover:bg-[#2e4528] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.95]"
+                className="w-11 h-11 rounded-full bg-forest flex items-center justify-center text-white hover:bg-forest-mid transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.95]"
               >
                 →
               </button>
-              <span className="ml-2 text-[#8baf7c] text-xs tracking-widest tabular-nums">
+              <span className="ml-2 text-sage-light text-xs tracking-widest tabular-nums">
                 {String(current + 1).padStart(2, "0")} /{" "}
                 {String(testimonials.length).padStart(2, "0")}
               </span>
@@ -198,19 +198,19 @@ export default function Testimonials() {
 
             {/* Stats cards */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="p-6 rounded-2xl bg-[#1c2b1a]/5 ring-1 ring-[#1c2b1a]/9">
-                <p className="font-serif text-[#1c2b1a] text-4xl font-bold">
+              <div className="p-6 rounded-2xl bg-forest/5 ring-1 ring-forest/9">
+                <p className="font-serif text-forest text-4xl font-bold">
                   98%
                 </p>
-                <p className="text-[#5c6b5a] text-xs mt-2 leading-relaxed">
+                <p className="text-sage-muted text-xs mt-2 leading-relaxed">
                   Client retention across all estate projects
                 </p>
               </div>
-              <div className="p-6 rounded-2xl bg-[#c8a84b]/8 ring-1 ring-[#c8a84b]/18">
-                <p className="font-serif text-[#1c2b1a] text-4xl font-bold">
+              <div className="p-6 rounded-2xl bg-gold/8 ring-1 ring-gold/18">
+                <p className="font-serif text-forest text-4xl font-bold">
                   15+
                 </p>
-                <p className="text-[#5c6b5a] text-xs mt-2 leading-relaxed">
+                <p className="text-sage-muted text-xs mt-2 leading-relaxed">
                   Years designing premium outdoor environments
                 </p>
               </div>
